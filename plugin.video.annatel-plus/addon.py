@@ -63,7 +63,7 @@ class Annatel():
             logo = channel.find('logo').text
             url = channel.find('url').text
 
-            m3u_list.append(f'#EXTINF:1 tvg-logo="{logo}",{name.replace("é", "e").replace(" ", "_")}')
+            m3u_list.append(f'#EXTINF:1 tvg-logo="{logo}",{name.replace("é", "e").replace(" ", "_").replace("è", "e")}')
             m3u_list.append(url)
         
         m3u_string = '\n'.join(m3u_list)
